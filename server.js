@@ -29,7 +29,7 @@ const limiter = rateLimit({
 // Apply rate limiter to all routes
 app.use(limiter);
 
-// Route: /bfhl | Method: POST
+// Route: /bfhl | Method: POS
 app.post('/bfhl', (req, res) => {
     try {
         const { data } = req.body;
