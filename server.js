@@ -59,7 +59,12 @@ app.post('/bfhl', (req, res) => {
         res.json(response);
     } catch (error) {
         console.error(error);
-        res.status(400).json({ error: error.message });
+        res.status(400).json({
+            error: error.message,
+            user_id: userData.user_id,
+            email: userData.email,
+            roll_number: userData.roll_number
+        });
     }
 });
 
@@ -70,7 +75,11 @@ app.get('/bfhl', (req, res) => {
         res.status(200).json({ operation_code: 1 });
     } catch (error) {
         console.error(error);
-        res.status(500).json({ error: 'Internal server error' });
+        res.status(500).json({
+            error: 'Internal server error', user_id: userData.user_id,
+            email: userData.email,
+            roll_number: userData.roll_number
+        });
     }
 });
 
