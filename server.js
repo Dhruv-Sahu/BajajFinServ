@@ -74,6 +74,10 @@ app.get('/bfhl', (req, res) => {
     }
 });
 
+app.get('/', () => {
+    res.send("BFHL API");
+})
+
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });
