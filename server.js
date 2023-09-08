@@ -75,7 +75,7 @@ app.get('/bfhl', (req, res) => {
 });
 
 app.get('/', () => {
-    res.send("BFHL API");
+    res.send("BFHL API").json({ "you are in the / page"});
 })
 
 app.listen(port, () => {
